@@ -1,8 +1,8 @@
-from login import login
-from signup import signup
-from facialrecognition.takeimage import image
-from facialrecognition.recognition import perform_facial_recognition
-from facialrecognition.facerecognitionchecks import *
+from AccountSystem.login import login
+from AccountSystem.signup import signup
+from AccountSystem.facialrecognition.takeimage import image
+from AccountSystem.facialrecognition.recognition import perform_facial_recognition
+from AccountSystem.facialrecognition.facerecognitionchecks import *
 import PySimpleGUI as sg
 
 class GUIS:

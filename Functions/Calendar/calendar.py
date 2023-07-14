@@ -6,8 +6,6 @@ import sqlite3
 class CalendarApp:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.tk.call("lappend", "auto_path", "UIThemes")
-        self.root.tk.call("package", "require", "awdark")
         self.root.title("Calendar")
         self.root.config(bg="#050816")
         self.style = ttk.Style()

@@ -57,11 +57,14 @@ class MainUI:
     def answer(self,test):
         text = assistant.reply(test)
         return text
+    
     def start(self):
         email = gui.remembermecheck()
-        while email is None:
-            email = gui.login()
-            gui.popup("There has been an error with your login, please try again")
+        while True:
+            if email is None:
+                email = gui.remembermecheck()
+            else:
+                break                
         self.run(email)
 
 
