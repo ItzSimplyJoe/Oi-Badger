@@ -1,6 +1,7 @@
 import PySimpleGUI as sg
 import random
 import threading
+from AccountSystem.GUIS import gui
 from Speech.voiceoutput import voiceoutput
 from Speech.voiceinput import voiceinput
 from main import assistant
@@ -56,7 +57,15 @@ class MainUI:
     def answer(self,test):
         text = assistant.reply(test)
         return text
+    def start(self):
+        email = gui.remembermecheck()
+        while email is None:
+            email = gui.login()
+            gui.popup("There has been an error with your login, please try again")
+        self.run(email)
+
+
 
 if __name__ == '__main__':
     mainui = MainUI()
-    mainui.run('email')
+    mainui.start()

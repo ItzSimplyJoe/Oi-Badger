@@ -380,7 +380,7 @@ class GUIS:
             self.starterpage()
     
     def proceed(self, user):
-        print(user)
+        return (user[1])
     
     def passwordvalidation(self, password):
         if len(password) < 7:
@@ -389,4 +389,3 @@ class GUIS:
             return True
 
 gui = GUIS()
-gui.remembermecheck()
